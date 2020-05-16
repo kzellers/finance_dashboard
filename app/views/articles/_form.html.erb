@@ -2,17 +2,8 @@
 <%= form_with model: @article, local: true do |form| %>
 
   <p>
-    <%= select_date Date.today, prefix: :start_date %>
-  </p>
-
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_area :title %>
-  </p>
-
-  <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
+    <%= form.label :date %> <br>
+    <%= select_date Date.today, prefix: :date %>
   </p>
 
   <p>

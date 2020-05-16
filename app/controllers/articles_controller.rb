@@ -47,6 +47,6 @@ except: [:index, :show]
 
   private
   def article_params
-    params.require(:article).permit(:title, :text, :real_estate, :savings_accounts, :checking_accounts, :retirement_accounts, :vehicles, :iras, :stocks, :debt)
+    params.require(:article).permit(:date, :real_estate, :savings_accounts, :checking_accounts, :retirement_accounts, :vehicles, :iras, :stocks, :debt)
   end
 end

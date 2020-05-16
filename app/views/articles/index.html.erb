@@ -1,18 +1,22 @@
 
-<h1>Listing Articles</h1>
+<h1>Finance Updates</h1>
 
 <table>
   <tr>
-    <th>Title</th>
-    <th>Text</th>
+    <th>Date</th>
     <th>Real Estate</th>
     <th>Savings Accounts</th>
+    <th>Checking Accounts</th>
+    <th>Retirement Accounts</th>
+    <th>Vehicles</th>
+    <th>IRAs</th>
+    <th>Stocks</th>
+
   </tr>
 
   <% @articles.each do |article| %>
     <tr>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
+      <td><%= article.date %></td>
       <td><%= article.real_estate %></td>
       <td><%= article.savings_accounts %></td>
       <td><%= article.checking_accounts%></td>

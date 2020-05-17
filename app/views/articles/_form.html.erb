@@ -3,47 +3,47 @@
 
   <p>
     <%= form.label :date %> <br>
-    <%= select_date Date.today, prefix: :date %>
+    <%= form.date_select :date, :start_year=>1950 %>
   </p>
 
   <p>
     <%= form.label :real_estate %><br>
-    <%= form.text_area :real_estate %>
+    <%= form.text_field :real_estate, :value=>0%>
   </p>
 
   <p>
     <%= form.label :savings_accounts %><br>
-    <%= form.text_area :savings_accounts %>
+    <%= form.text_field :savings_accounts, :value=>0%>
   </p>
 
   <p>
     <%= form.label :checking_accounts %><br>
-    <%= form.text_area :checking_accounts %>
+    <%= form.text_field :checking_accounts, :value=>0%>
   </p>
 
   <p>
     <%= form.label :retirement_accounts %><br>
-    <%= form.text_area :retirement_accounts %>
+    <%= form.text_field :retirement_accounts, :value=>0%>
   </p>
 
   <p>
     <%= form.label :vehicles %><br>
-    <%= form.text_area :vehicles %>
+    <%= form.text_field :vehicles, :value=>0%>
   </p>
 
   <p>
     <%= form.label :iras %><br>
-    <%= form.text_area :iras %>
+    <%= form.text_field :iras, :value=>0%>
   </p>
 
   <p>
     <%= form.label :stocks %><br>
-    <%= form.text_area :stocks %>
+    <%= form.text_field :stocks, :value=>0%>
   </p>
 
   <p>
     <%= form.label :debt %><br>
-    <%= form.text_area :debt %>
+    <%= form.text_field :debt, :value=>0%>
   </p>
 
   <p>

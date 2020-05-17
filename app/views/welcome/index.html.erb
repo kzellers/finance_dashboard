@@ -2,3 +2,14 @@
 <p>this is where I will put my finance calculator</p>
 <%= link_to 'Finance Log', controller: 'articles' %>
 <%= link_to 'Add Update', new_article_path %>
+
+<%= @articles = Article.all %>
+
+<%= line_chart @articles.map { |article|
+    {name: article.real_estate, data: article.real_estate}
+} %>
+
+<br>
+<br>
+
+<%= line_chart Article.group(:real_estate).group_by { |a| a.date } %>

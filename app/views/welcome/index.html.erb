@@ -1,15 +1,15 @@
-<h1>Finance App</h1>
+<h1>Finance Dashboard</h1>
 <p>this is where I will put my finance calculator</p>
 <%= link_to 'Finance Log', controller: 'articles' %>
 <%= link_to 'Add Update', new_article_path %>
-
-<%= @articles = Article.all %>
-
-<%= line_chart @articles.map { |article|
-    {name: article.real_estate, data: article.real_estate}
-} %>
-
 <br>
 <br>
 
-<%= line_chart Article.group(:real_estate).group_by { |a| a.date } %>
+<%= line_chart Article.group(:date).maximum(:real_estate) %>
+<%= line_chart Article.group(:date).maximum(:savings_accounts) %>
+<%= line_chart Article.group(:date).maximum(:checking_accounts) %>
+<%= line_chart Article.group(:date).maximum(:retirement_accounts) %>
+<%= line_chart Article.group(:date).maximum(:vehicles) %>
+<%= line_chart Article.group(:date).maximum(:iras) %>
+<%= line_chart Article.group(:date).maximum(:stocks) %>
+<%= line_chart Article.group(:date).maximum(:debt) %>

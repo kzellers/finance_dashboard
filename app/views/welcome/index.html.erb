@@ -1,15 +1,25 @@
 <h1>Finance Dashboard</h1>
-<p>this is where I will put my finance calculator</p>
 <%= link_to 'Finance Log', controller: 'articles' %>
 <%= link_to 'Add Update', new_article_path %>
 <br>
 <br>
 
-<%= line_chart Article.group(:date).maximum(:real_estate) %>
-<%= line_chart Article.group(:date).maximum(:savings_accounts) %>
-<%= line_chart Article.group(:date).maximum(:checking_accounts) %>
-<%= line_chart Article.group(:date).maximum(:retirement_accounts) %>
-<%= line_chart Article.group(:date).maximum(:vehicles) %>
-<%= line_chart Article.group(:date).maximum(:iras) %>
-<%= line_chart Article.group(:date).maximum(:stocks) %>
-<%= line_chart Article.group(:date).maximum(:debt) %>
+<h1> Savings </h1> <br>
+
+<%= line_chart [
+  { name: 'real_estate', data: Article.group(:date).maximum(:real_estate) },
+  { name: 'savings_accounts', data: Article.group(:date).maximum(:savings_accounts) },
+  { name: 'checking_accounts', data: Article.group(:date).maximum(:checking_accounts) },
+  { name: 'retirement_accounts', data: Article.group(:date).maximum(:retirement_accounts) },
+  { name: 'vehicles', data: Article.group(:date).maximum(:vehicles) },
+  { name: 'iras', data: Article.group(:date).maximum(:iras) },
+  { name: 'mutual_funds', data: Article.group(:date).maximum(:mutual_funds) },
+  { name: 'debt', data: Article.group(:date).maximum(:debt) },
+] %>
+
+<br>
+<h1> Stocks </h1> <br>
+
+<%= line_chart [
+  { name: 'stocks', data: Article.group(:date).maximum(:stocks) },
+] %>

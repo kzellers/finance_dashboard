@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_16_214934) do
+ActiveRecord::Schema.define(version: 2020_05_17_221610) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_05_16_214934) do
     t.integer "stocks"
     t.integer "debt"
     t.date "date"
+    t.integer "mutual_funds"
   end
 
 end

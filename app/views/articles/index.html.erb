@@ -12,6 +12,7 @@
     <th>IRAs</th>
     <th>Mutual Funds</th>
     <th>Stocks</th>
+    <th>Total</th>
 
   </tr>
 
@@ -26,6 +27,7 @@
       <td><%= article.iras%></td>
       <td><%= article.mutual_funds%></td>
       <td><%= article.stock_id%></td>
+      <td><%= article.total = (article.real_estate) %></td>
       <td><%= link_to 'Show', article_path(article) %></td>
       <td><%= link_to 'Edit', edit_article_path(article) %></td>
       <td><%= link_to 'Delete', article_path(article),

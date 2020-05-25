@@ -8,48 +8,54 @@
 
   <p>
     <%= form.label :real_estate %><br>
-    <%= form.text_field :real_estate, :default=>0%>
+    <%= form.text_field :real_estate, required: true, :default=>0 %>
   </p>
 
   <p>
     <%= form.label :savings_accounts %><br>
-    <%= form.text_field :savings_accounts, :default=>0%>
+    <%= form.text_field :savings_accounts, required:true, :default=>0%>
   </p>
 
   <p>
     <%= form.label :checking_accounts %><br>
-    <%= form.text_field :checking_accounts, :default=>0%>
+    <%= form.text_field :checking_accounts, required:true, :default=>0%>
   </p>
 
   <p>
     <%= form.label :retirement_accounts %><br>
-    <%= form.text_field :retirement_accounts, :default=>0%>
+    <%= form.text_field :retirement_accounts, required:true, :default=>0%>
   </p>
 
   <p>
     <%= form.label :vehicles %><br>
-    <%= form.text_field :vehicles, :default=>0%>
+    <%= form.text_field :vehicles, required:true, :default=>0%>
   </p>
 
   <p>
     <%= form.label :iras %><br>
-    <%= form.text_field :iras, :default=>0%>
+    <%= form.text_field :iras, required:true, :default=>0%>
   </p>
 
   <p>
     <%= form.label :mutual_funds %><br>
-    <%= form.text_field :mutual_funds, :default=>0%>
+    <%= form.text_field :mutual_funds, required:true, :default=>0%>
   </p>
 
   <p>
     <%= form.label :debt %><br>
-    <%= form.text_field :debt, :default=>0%>
+    <%= form.text_field :debt, required:true, :default=>0%>
   </p>
 
   <p>
     <%= form.label :stock_id %><br>
     (Insert stock name ID here) <br>
-    <%= form.text_field :stock_id %>
+    <%= form.text_field :stock_id, required:true %>
+  </p>
+
+  <p>
+    <%= form.label :stock_amount %><br>
+    (Insert stock amount here) <br>
+    <%= form.text_field :stock_amount, required:true, :default=>0 %>
   </p>
 
   <p>

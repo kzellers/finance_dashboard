@@ -44,8 +44,15 @@
 </p>
 
 <p>
+  <strong>Stock amount:</strong>
+  <%= @article.stock_amount %>
+</p>
+
+<p>
   <strong>Total:</strong>
-  <%= @article.total %>
+  <%= @article.total = @article.real_estate + @article.savings_accounts + @article.checking_accounts +
+  @article.retirement_accounts + @article.vehicles + @article.iras - @article.debt %>
+  <%= @article.save %>
 </p>
 
 

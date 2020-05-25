@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_24_190512) do
+ActiveRecord::Schema.define(version: 2020_05_25_181321) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2020_05_24_190512) do
     t.string "stock_id"
     t.integer "stock_count"
     t.integer "total"
+    t.integer "stock_amount"
   end
 
 end

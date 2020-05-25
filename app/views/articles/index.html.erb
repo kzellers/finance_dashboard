@@ -11,7 +11,6 @@
     <th>Vehicles</th>
     <th>IRAs</th>
     <th>Mutual Funds</th>
-    <th>Stocks</th>
     <th>Total</th>
 
   </tr>
@@ -26,14 +25,39 @@
       <td><%= article.vehicles%></td>
       <td><%= article.iras%></td>
       <td><%= article.mutual_funds%></td>
-      <td><%= article.stock_id%></td>
-      <td><%= article.total = (article.real_estate) %></td>
+      <td><%= article.total%></td>
       <td><%= link_to 'Show', article_path(article) %></td>
       <td><%= link_to 'Edit', edit_article_path(article) %></td>
       <td><%= link_to 'Delete', article_path(article),
                method: :delete,
                data: { confirm: 'Are you sure?' } %></td>
     </tr>
+  <% end %>
+</table>
+
+<br>
+
+<h1>Stock Updates</h1>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Stocks</th>
+
+  </tr>
+
+  <% @articles.each do |article| %>
+      <% if article.stock_amount != nil %>
+        <tr>
+          <td><%= article.date %></td>
+          <td><%= article.stock_id%></td>
+          <td><%= article.stock_amount%></td>
+          <td><%= link_to 'Show', article_path(article) %></td>
+          <td><%= link_to 'Edit', edit_article_path(article) %></td>
+          <td><%= link_to 'Delete', article_path(article),
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+      <% end %>
   <% end %>
 </table>
 

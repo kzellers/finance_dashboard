@@ -1,1 +1,28 @@
-<h1> stocks index </h1>
+<h1>Stock Log</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Stock Name</th>
+    <th>Stock Amount</th>
+    <th>Total Value</th>
+
+  </tr>
+
+  <% @stocks.each do |stock| %>
+        <tr>
+          <td><%= stock.date %></td>
+          <td><%= stock.stock_name%></td>
+          <td><%= stock.amount %></td>
+          <td><%= stock.value_each %></td>
+          <td><%= link_to 'Show', stock_path(stock) %></td>
+          <td><%= link_to 'Edit', edit_stock_path(stock) %></td>
+          <td><%= link_to 'Delete', stock_path(stock),
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+  <% end %>
+</table>
+
+<br>
+<%= link_to 'Back', welcome_index_path %>

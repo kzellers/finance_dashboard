@@ -14,14 +14,6 @@ except: [:index, :show]
     @article = Article.new
   end
 
-  def newform
-    @article = Article.newform
-  end
-
-  def newstock
-    @article = Article.newstock
-  end
-
   def edit
     @article = Article.find(params[:id])
   end
@@ -55,6 +47,6 @@ except: [:index, :show]
 
   private
   def article_params
-    params.require(:article).permit(:date, :real_estate, :savings_accounts, :checking_accounts, :retirement_accounts, :vehicles, :iras, :mutual_funds, :stock_id, :debt, :stock_amount)
+    params.require(:article).permit(:date, :real_estate, :savings_accounts, :checking_accounts, :retirement_accounts, :vehicles, :iras, :mutual_funds, :debt)
   end
 end

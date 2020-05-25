@@ -1,34 +1,51 @@
 class StocksController < ApplicationController
-  
+
   def index
     @stocks = Stock.all
   end
 
+  def show
+    @stock = Stock.find(params[:id])
+  end
+
   def new
-    @article = Stock.new
+    @stock = Stock.new
   end
 
-  def request_api(url)
-    response = Excon.get(
-      url,
-      headers: {
-        'X-RapidAPI-Host' => URI.parse(url).host,
-        'X-RapidAPI-Key' => ENV.fetch('RAPIDAPI_API_KEY')
-      }
-    )
-    return nil if response.status != 200
-    JSON.parse(response.body)
+  def edit
+    @stock = Stock.find(params[:id])
   end
 
-  def find_stock(stock_id)
-    request_api("https://investors-exchange-iex-trading.p.rapidapi.com/stock/#{URI.encode(stock_id)}/book")
+  def create
+    @stock = Stock.new(stock_params)
+
+    if @stock.save
+      redirect_to @stock
+    else
+      render 'new'
+    end
   end
 
-  def search
-    stocks = find_stock(params[:stock_id])
-    puts "stockstockstock"
-    @stock = stocks.first
+  def update
+    @stock = Stock.find(params[:id])
+
+    if @stock.update(stock_params)
+      redirect_to @stock
+    else
+      render 'edit'
+    end
   end
 
+  def destroy
+    @stock = Stock.find(params[:id])
+    @stock.destroy
+
+    redirect_to stocks_path
+  end
+
+  private
+  def stock_params
+    params.require(:stock).permit(:date, :stock_name, :amount)
+  end
 
 end

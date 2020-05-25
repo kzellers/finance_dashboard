@@ -1,0 +1,22 @@
+<p>
+  <strong> Date:</strong>
+  <%= @stock.date %>
+</p>
+
+<p>
+  <strong>Stocks:</strong>
+  <%= @stock.stock_name %>
+</p>
+
+<p>
+  <strong>Stock amount:</strong>
+  <%= @stock.amount %>
+</p>
+
+<p>
+  <strong>Value per stock:</strong>
+  <%= @stock.value_each = 5 %>
+</p>
+
+<%= link_to 'Edit', edit_stock_path(@stock) %> |
+<%= link_to 'Back', stocks_path %>

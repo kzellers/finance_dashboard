@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_25_215617) do
+ActiveRecord::Schema.define(version: 2020_05_29_021718) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -30,14 +30,22 @@ ActiveRecord::Schema.define(version: 2020_05_25_215617) do
     t.integer "stock_count"
     t.integer "total"
     t.integer "stock_amount"
+    t.integer "regular_savings"
+    t.integer "high_yield_savings"
+  end
+
+  create_table "investments", force: :cascade do |t|
+    t.integer "vtiax"
+    t.integer "vtsax"
+    t.date "date"
   end
 
   create_table "stocks", force: :cascade do |t|
-    t.string "stock_name"
-    t.integer "amount"
     t.date "date"
-    t.integer "value_each"
-    t.integer "value_total"
+    t.integer "vtiax"
+    t.integer "vtsax"
+    t.integer "total_invested"
+    t.integer "change"
   end
 
 end

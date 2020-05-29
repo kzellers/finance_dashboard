@@ -45,7 +45,7 @@ class StocksController < ApplicationController
 
   private
   def stock_params
-    params.require(:stock).permit(:date, :stock_name, :amount)
+    params.require(:stock).permit(:date, :vtiax, :vtsax, :total_invested, :change)
   end
 
 end

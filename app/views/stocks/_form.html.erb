@@ -1,24 +1,29 @@
 <%= form_with model: @stock, local: true do |form| %>
 
-  <p>
-    <%= form.label :date %> <br>
-    <%= form.date_select :date, :start_year=>1950 %>
-  </p>
+<p>
+  <%= form.label :date %> <br>
+  <%= form.date_select :date, :start_year=>1950 %>
+</p>
 
-  <p>
-    <%= form.label :stock_name %><br>
-    (Insert stock name ID here) <br>
-    <%= form.text_field :stock_name, required:true %>
-  </p>
+<p>
+  <%= form.label :vtiax %><br>
+  <%= form.text_field :vtiax, required: true, :default=>0 %>
+</p>
 
-  <p>
-    <%= form.label :amount %><br>
-    (Insert stock amount here) <br>
-    <%= form.text_field :amount, required:true, :default=>0 %>
-  </p>
+<p>
+  <%= form.label :vtsax %><br>
+  <%= form.text_field :vtsax, required: true, :default=>0 %>
+</p>
 
-  <p>
-    <%= form.submit %>
-  </p>
+<p>
+  <%= form.label :total_invested %><br>
+  <%= form.text_field :total_invested, required: true, :default=>0 %>
+</p>
+
+<p>
+  <%= form.submit%>
+</p>
+
+
 
 <% end %>

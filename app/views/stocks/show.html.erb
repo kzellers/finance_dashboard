@@ -4,18 +4,24 @@
 </p>
 
 <p>
-  <strong>Stocks:</strong>
-  <%= @stock.stock_name %>
+  <strong>VTIAX:</strong>
+  <%= @stock.vtiax %>
 </p>
 
 <p>
-  <strong>Stock amount:</strong>
-  <%= @stock.amount %>
+  <strong>VTSAX:</strong>
+  <%= @stock.vtsax %>
 </p>
 
 <p>
-  <strong>Value per stock:</strong>
-  <%= @stock.value_each = 5 %>
+  <strong>Total Invested:</strong>
+  <%= @stock.total_invested %>
+</p>
+
+<p>
+  <strong>Change:</strong>
+  <%= @stock.change = (@stock.total_invested - (@stock.vtiax + @stock.vtsax))*(-1)  %>
+  <% @stock.save %>
 </p>
 
 <%= link_to 'Edit', edit_stock_path(@stock) %> |

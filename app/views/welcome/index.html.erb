@@ -10,15 +10,18 @@
 <h1> Savings </h1> <br>
 
 <%= line_chart [
-  { name: 'real_estate', data: Article.group(:date).maximum(:real_estate) },
-  { name: 'savings_accounts', data: Article.group(:date).maximum(:savings_accounts) },
   { name: 'checking_accounts', data: Article.group(:date).maximum(:checking_accounts) },
-  { name: 'retirement_accounts', data: Article.group(:date).maximum(:retirement_accounts) },
-  { name: 'vehicles', data: Article.group(:date).maximum(:vehicles) },
-  { name: 'iras', data: Article.group(:date).maximum(:iras) },
-  { name: 'mutual_funds', data: Article.group(:date).maximum(:mutual_funds) },
+  { name: 'savings_accounts', data: Article.group(:date).maximum(:savings_accounts) },
   { name: 'debt', data: Article.group(:date).maximum(:debt) },
 ] %>
 
 <br>
-<h1> Stocks </h1> <br>
+<h1> Investments </h1> <br>
+
+<%= line_chart [
+  { name: 'vtiax', data: Stock.group(:date).maximum(:vtiax)},
+  { name: 'vtsax', data: Stock.group(:date).maximum(:vtsax)},
+  { name: 'total_invested', data: Stock.group(:date).maximum(:total_invested)},
+  { name: 'change', data: Stock.group(:date).maximum(:change)},
+
+] %>

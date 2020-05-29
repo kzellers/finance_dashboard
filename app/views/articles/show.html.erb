@@ -4,33 +4,15 @@
 </p>
 
 <p>
-  <strong>Real Estate:</strong>
-  <%= @article.real_estate %>
+  <strong>Checking Accounts:</strong>
+  <%= @article.checking_accounts%>
 </p>
 
 <p>
   <strong>Savings Accounts:</strong>
-  <%= @article.savings_accounts %>
-</p>
+  <%= @article.savings_accounts = @article.high_yield_savings + @article.regular_savings %>
+  <% @article.save %>
 
-<p>
-  <strong>Checking Accounts:</strong>
-  <%= @article.checking_accounts %>
-</p>
-
-<p>
-  <strong>Retirement Accounts:</strong>
-  <%= @article.retirement_accounts %>
-</p>
-
-<p>
-  <strong>Vehicles:</strong>
-  <%= @article.vehicles %>
-</p>
-
-<p>
-  <strong>IRAs:</strong>
-  <%= @article.iras %>
 </p>
 
 <p>
@@ -39,20 +21,9 @@
 </p>
 
 <p>
-  <strong>Stocks:</strong>
-  <%= @article.stock_id %>
-</p>
-
-<p>
-  <strong>Stock amount:</strong>
-  <%= @article.stock_amount %>
-</p>
-
-<p>
   <strong>Total:</strong>
-  <%= @article.total = @article.real_estate + @article.savings_accounts + @article.checking_accounts +
-  @article.retirement_accounts + @article.vehicles + @article.iras - @article.debt %>
-  <%= @article.save %>
+  <%= @article.total = @article.savings_accounts + @article.checking_accounts - @article.debt %>
+  <% @article.save %>
 </p>
 
 

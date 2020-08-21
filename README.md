@@ -7,18 +7,16 @@ Finance Dashboard is a personal finance tool to record snapshots about savings, 
 
 Installation
 From your command line: 
-//Clone this repository
+`Clone this repository
 $ git clone https://github.com/kzellers/finance_dashboard
 
 //Enter the repository
 $ cd finance_dashboard
 
 //Run the application
-$ rails -s
+$ rails -s`
 
-From your web browser
-//Use the application
-$ http://localhost:3000/
+From your web browser, visit http://localhost:3000/ to view and use the app. 
 
 
 

@@ -8,7 +8,7 @@ Finance Dashboard is a personal finance tool to record snapshots of savings, deb
 # Installation
 From your command line: 
 ```Clone this repository
-//download the application
+//Download the application
 $ git clone https://github.com/kzellers/finance_dashboard
 
 //Enter the repository

@@ -1,6 +1,6 @@
 # Finance Dashboard
 
-Finance Dashboard is a personal finance tool to record snapshots of savings, debts, and investments over time. Finance Dashboard also:
+Finance Dashboard is a personal finance tool to record snapshots of savings, debts, and investments over time. Users will be able to see assets grow or decrease over time, and categorize the makeup of their personal portfolio. Finance Dashboard also:
 1. Utilizes Chartkick to graph snapshots over time
 2. Aggregates user data from multiple sources and categorizes by asset type
 3. Calculates change in investments between snapshots

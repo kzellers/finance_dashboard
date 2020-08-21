@@ -32,7 +32,7 @@ From your web browser, visit http://localhost:3000/ to view and use the app.
 3. Click create article to view the updated investments log 
 4. Return to the savings log at any time by clicking "Stock Log" at the top of the main homepage
 
-### Editing or deleting an update
+### Editing or deleting a snapshot
 1. Visit the main homepage, and click on the log that you would like to change
 2. To edit an snapshot, click "Edit" to the right of the snapshot
 3. To delete a snapshot, click "Delete" to the right of the snapshot
